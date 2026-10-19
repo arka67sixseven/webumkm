@@ -1,25 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dapur Bu Sari — Katering Rumahan &amp; Frozen Food Sleman | Pesan via WhatsApp</title>
+  <title>Dapur Bu Sari — Katering &amp; Frozen Food Sleman, Yogyakarta</title>
   <meta name="description" content="Nasi box, tumpeng, sambal botol, dan frozen food rumahan di Sleman, Yogyakarta. Dimasak harian dari bahan segar pasar. Pesan mudah lewat WhatsApp.">
+  <link rel="canonical" href="https://webumkm-lilajayyyy.vercel.app/">
   <meta name="theme-color" content="#1E5C3A">
   <meta name="color-scheme" content="light">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="id_ID">
   <meta property="og:site_name" content="Dapur Bu Sari">
+  <meta property="og:url" content="https://webumkm-lilajayyyy.vercel.app/">
   <meta property="og:title" content="Dapur Bu Sari — Katering Rumahan &amp; Frozen Food Sleman">
   <meta property="og:description" content="Masakan rumahan dimasak harian dari bahan segar. Nasi box, tumpeng, sambal botol, frozen food. Pesan lewat WhatsApp.">
-  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image" content="https://webumkm-lilajayyyy.vercel.app/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ilustrasi nasi box, tumpeng, dan sambal botol Dapur Bu Sari">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dapur Bu Sari — Katering &amp; Frozen Food Sleman, Yogyakarta">
+  <meta name="twitter:description" content="Masakan rumahan dimasak harian dari bahan segar. Nasi box, tumpeng, sambal botol, frozen food. Pesan lewat WhatsApp.">
+  <meta name="twitter:image" content="https://webumkm-lilajayyyy.vercel.app/assets/img/og-image.png">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Calistoga&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="preload" href="assets/fonts/calistoga-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/boot.js"></script>
 
@@ -29,9 +36,12 @@
     "@type": "FoodEstablishment",
     "name": "Dapur Bu Sari",
     "description": "Katering rumahan & frozen food di Sleman, Yogyakarta.",
+    "url": "https://webumkm-lilajayyyy.vercel.app/",
+    "image": "https://webumkm-lilajayyyy.vercel.app/assets/img/og-image.png",
     "servesCuisine": "Masakan Indonesia",
     "priceRange": "Rp",
     "telephone": "+6281200000000",
+    "sameAs": ["https://instagram.com/dapurbusari"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jl. Kaliurang KM 8, Ngaglik",
@@ -75,7 +85,7 @@
     <div class="container-x flex items-center justify-between gap-4 py-2.5 text-xs sm:text-sm">
       <p class="flex items-center gap-2">
         <svg class="size-4 shrink-0 text-pandan-300" aria-hidden="true"><use href="#ikon-truk"/></svg>
-        <span>Free antar minimal 5 box — Sleman &amp; Kota Jogja</span>
+        <span>Gratis antar minimal 5 box — Sleman &amp; Kota Jogja</span>
       </p>
       <p class="hidden items-center gap-2 sm:flex">
         <svg class="size-4 shrink-0 text-pandan-300" aria-hidden="true"><use href="#ikon-jam"/></svg>
@@ -90,12 +100,12 @@
       <a href="#atas" class="flex items-center gap-3" aria-label="Dapur Bu Sari — kembali ke atas halaman">
         <img src="assets/img/favicon.svg" alt="" width="40" height="40" class="size-10 rounded-xl">
         <span class="flex flex-col leading-tight">
-          <span class="font-display text-lg text-ink" data-nama-umkm>Dapur Bu Sari</span>
+          <span class="whitespace-nowrap font-display text-lg text-ink" data-nama-umkm>Dapur Bu Sari</span>
           <span class="hidden text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted sm:block">Katering Rumahan</span>
         </span>
       </a>
 
-      <nav class="hidden items-center gap-7 md:flex" aria-label="Navigasi utama">
+      <nav class="hidden items-center gap-4 md:flex lg:gap-7" aria-label="Navigasi utama">
         <a data-nav href="#menu" class="text-sm font-semibold text-muted transition-colors hover:text-pandan-800">Menu</a>
         <a data-nav href="#keunggulan" class="text-sm font-semibold text-muted transition-colors hover:text-pandan-800">Keunggulan</a>
         <a data-nav href="#tentang" class="text-sm font-semibold text-muted transition-colors hover:text-pandan-800">Tentang</a>
@@ -183,7 +193,7 @@
           <img src="assets/img/hero-art.svg" alt="Ilustrasi semangkuk nasi hangat dengan lauk ayam bakar, telur, dan sambal" width="640" height="560" fetchpriority="high" class="mx-auto w-full max-w-lg lg:max-w-none">
           <p class="animate-float absolute left-2 top-8 flex items-center gap-2.5 rounded-2xl border border-line bg-card px-4 py-3 text-sm font-bold shadow-soft sm:left-6">
             <svg class="size-5 text-pandan-700" aria-hidden="true"><use href="#ikon-perisai"/></svg>
-            100% halal &amp; higienis
+            Bahan halal, dapur bersih
           </p>
           <p class="animate-float-slow absolute bottom-10 right-2 flex items-center gap-2.5 rounded-2xl border border-line bg-card px-4 py-3 text-sm font-bold shadow-soft sm:right-6">
             <svg class="size-5 text-pandan-700" aria-hidden="true"><use href="#ikon-daun"/></svg>
@@ -194,9 +204,9 @@
     </section>
 
     <!-- Strip menu berjalan -->
-    <div class="marquee border-y border-line bg-card py-5" role="region" aria-label="Menu andalan Dapur Bu Sari">
+    <section class="marquee border-y border-line bg-card py-5" aria-label="Menu andalan Dapur Bu Sari">
       <div id="marquee-track" class="marquee-track"></div>
-    </div>
+    </section>
 
     <!-- Keunggulan -->
     <section id="keunggulan" class="bg-tint py-16 sm:py-24" aria-labelledby="judul-keunggulan">
@@ -204,7 +214,7 @@
         <div class="mx-auto max-w-2xl text-center" data-reveal>
           <p class="eyebrow">Kenapa Pilih Kami</p>
           <h2 id="judul-keunggulan" class="mt-3 font-display text-h2 text-ink">Dimasak seperti untuk keluarga sendiri.</h2>
-          <p class="mt-4 text-muted">Empat hal ini yang bikin pelanggan balik lagi — bukan cuma sekali.</p>
+          <p class="mt-4 text-muted">Empat hal yang bikin pelanggan balik lagi.</p>
         </div>
         <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <li class="card p-6" data-reveal>
@@ -219,7 +229,7 @@
               <svg class="size-6" aria-hidden="true"><use href="#ikon-perisai"/></svg>
             </span>
             <h3 class="mt-5 font-bold">Higienis &amp; halal</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">Dapur bersih, bahan halal, tanpa MSG berlebih. Kemasan tersegel rapi.</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Dapur dijaga bersih, bahan halal, kemasan tersegel rapi.</p>
           </li>
           <li class="card p-6" data-reveal="naik-3">
             <span class="grid size-12 place-items-center rounded-2xl bg-kunyit-50 text-kunyit-700">
@@ -301,7 +311,7 @@
           </div>
           <p class="absolute -bottom-5 left-6 flex items-center gap-2.5 rounded-2xl border border-line bg-card px-4 py-3 text-sm font-bold shadow-soft">
             <svg class="size-5 text-pandan-700" aria-hidden="true"><use href="#ikon-perisai"/></svg>
-            Sejak 2019, tidak pernah telat antar
+            Resep keluarga sejak 2019
           </p>
         </div>
         <div data-reveal="naik-2">
@@ -311,7 +321,7 @@
             Dapur Bu Sari dimulai dari hobi Bu Sari memasak untuk acara RT. Sekarang, dua dapur rumahan kami melayani pesanan harian, rapat kantor, sampai syukuran — dengan resep keluarga yang tidak berubah sejak hari pertama.
           </p>
           <p class="mt-4 leading-relaxed text-muted">
-            Kami percaya makanan yang jujur lahir dari bahan yang segar dan tangan yang telaten. Karena itu semua pesanan dimasak dadakan, bukan dipanaskan ulang.
+            Kami percaya makanan yang jujur lahir dari bahan segar dan tangan yang telaten. Semua pesanan dimasak setelah dipesan, bukan dipanaskan ulang.
           </p>
           <dl id="tentang-stats" class="mt-9 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4"></dl>
         </div>
@@ -356,7 +366,7 @@
         </div>
         <p class="mt-6 text-sm text-pandan-100">
           Atau simpan nomor kami:
-          <a data-tel data-wa-tampil href="tel:+6281200000000" class="font-bold text-white underline decoration-pandan-300 underline-offset-4 hover:decoration-white">0812-0000-0000</a>
+          <a data-tel data-wa-tampil href="tel:+6281200000000" class="font-bold text-white underline decoration-pandan-300 underline-offset-4 hover:decoration-white">0812&#8209;0000&#8209;0000</a>
         </p>
       </div>
     </section>
@@ -399,7 +409,7 @@
                 </span>
                 <div class="min-w-0">
                   <p class="text-sm font-bold">WhatsApp (paling cepat)</p>
-                  <p class="mt-1 text-sm text-muted">Balasan cepat setiap jam buka — <span data-wa-tampil>0812-0000-0000</span></p>
+                  <p class="mt-1 text-sm text-muted">Balasan cepat setiap jam buka — <span data-wa-tampil>0812&#8209;0000&#8209;0000</span></p>
                   <a data-wa href="https://wa.me/6281200000000?text=Halo%20Dapur%20Bu%20Sari%21" class="btn btn-primary btn-sm mt-3">
                     <svg class="size-4" aria-hidden="true"><use href="#ikon-wa"/></svg>
                     Chat sekarang
@@ -464,7 +474,7 @@
           <li>
             <a data-wa href="https://wa.me/6281200000000?text=Halo%20Dapur%20Bu%20Sari%21" class="flex items-center gap-2.5 text-pandan-100/90 transition-colors hover:text-white">
               <svg class="size-4 shrink-0" aria-hidden="true"><use href="#ikon-wa"/></svg>
-              <span data-wa-tampil>0812-0000-0000</span>
+              <span data-wa-tampil>0812&#8209;0000&#8209;0000</span>
             </a>
           </li>
           <li>
@@ -480,10 +490,11 @@
         </ul>
       </div>
     </div>
+    <!-- Baris bawah: beri ruang di kanan agar teks tidak tertutup FAB / tombol ke atas -->
     <div class="border-t border-white/10">
-      <div class="container-x flex flex-col items-center justify-between gap-2 py-6 text-xs text-pandan-100/80 sm:flex-row">
-        <p>© <span id="tahun">2026</span> <span data-nama-umkm>Dapur Bu Sari</span> · Sleman, Yogyakarta</p>
-        <p>Katering rumahan &amp; frozen food</p>
+      <div class="container-x flex flex-col items-start justify-between gap-2 py-6 text-xs text-pandan-100/80 sm:flex-row sm:items-center">
+        <p class="max-w-[55%] sm:max-w-none">© <span id="tahun">2026</span> <span data-nama-umkm>Dapur Bu Sari</span> · Sleman, Yogyakarta</p>
+        <p class="sm:mr-28">Katering rumahan &amp; frozen food</p>
       </div>
     </div>
   </footer>

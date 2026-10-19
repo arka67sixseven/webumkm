@@ -23,6 +23,7 @@ atau input pengguna yang diproses server. Permukaan serangan sangat kecil:
 | Tanggal | Temuan | Severity | Fix |
 |---|---|---|---|
 | 2026-10-19 | Audit awal fitur (gitleaks + semgrep): tidak ada temuan | — | — |
+| 2026-10-19 | Google Fonts pihak ketiga: render-blocking (~900 ms) + CSP memperbolehkan origin luar | Rendah (hardening) | Font di-self-host ke `assets/fonts/` (Calistoga + variable font Plus Jakarta Sans), CSP dipersempit ke `style-src 'self'; font-src 'self'` |
 
 ## ⚠️ Diterima sadar (accepted risk) — tinjau ulang berkala
 

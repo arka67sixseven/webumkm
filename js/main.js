@@ -293,9 +293,11 @@
 
   /* ---------- status buka / tutup ---------- */
   function hitungStatusBuka() {
-    const sekarang = new Date();
-    const hari = sekarang.getDay();
-    const menit = sekarang.getHours() * 60 + sekarang.getMinutes();
+    // WIB selalu UTC+7 (tanpa DST). Geser waktu perangkat dulu supaya hari/jam
+    // yang dibaca adalah waktu WIB, di mana pun pengunjung berada.
+    const wib = new Date(Date.now() + (7 * 60 + new Date().getTimezoneOffset()) * 60000);
+    const hari = wib.getDay();
+    const menit = wib.getHours() * 60 + wib.getMinutes();
     const jadwal = UMKM.jamOperasional || [];
     const hariIni = jadwal.find((j) => j.hari.includes(hari));
     if (hariIni && menit >= hariIni.bukaMenit && menit < hariIni.tutupMenit) {

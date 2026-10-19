@@ -10,7 +10,7 @@ const UMKM = {
   /* ---------- Identitas ---------- */
   nama: "Dapur Bu Sari",
   wa: "6281200000000", // ← GANTI: nomor WhatsApp format internasional tanpa "+" (contoh: 628123456789)
-  waTampil: "0812-0000-0000", // ← GANTI: nomor WhatsApp untuk ditampilkan
+  waTampil: "0812‑0000‑0000", // ← GANTI: nomor WhatsApp untuk ditampilkan
   instagram: "dapurbusari", // ← GANTI: username Instagram tanpa "@"
   alamat: "Jl. Kaliurang KM 8, Ngaglik, Sleman, Yogyakarta", // ← GANTI
   area: "Sleman & Kota Yogyakarta",
@@ -27,7 +27,7 @@ const UMKM = {
   /* ---------- Teks strip menu berjalan ---------- */
   strip: ["Nasi Box", "Tumpeng Mini", "Frozen Food", "Sambal Botol", "Bolu Pandan", "Hampers", "Ayam Bakar", "Layanan Antar"],
 
-  /* ---------- Statistik di bagian "Tentang" ---------- */
+  /* ---------- Statistik di bagian "Tentang" (angka contoh — ← GANTI) ---------- */
   stats: [
     { angka: "7+", label: "Tahun memasak" },
     { angka: "12rb+", label: "Nasi box terkirim" },
@@ -129,7 +129,7 @@ const UMKM = {
     }
   ],
 
-  /* ---------- Testimoni pelanggan ---------- */
+  /* ---------- Testimoni pelanggan (contoh — ← GANTI dengan kutipan asli) ---------- */
   testimoni: [
     {
       nama: "Anisa R.",

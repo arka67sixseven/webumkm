@@ -6,7 +6,7 @@ const out = "public";
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
 
-for (const file of ["index.html", "robots.txt"]) {
+for (const file of ["index.html", "robots.txt", "sitemap.xml"]) {
   await cp(file, `${out}/${file}`);
 }
 for (const dir of ["css", "js", "assets"]) {

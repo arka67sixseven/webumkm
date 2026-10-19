@@ -10,6 +10,26 @@
 /* Jangan memindai hasil build (mencegah kelas "basi" ikut terbawa) */
 @source not "../css";
 
+/* ---------------- Font lokal (self-host, tanpa pihak ketiga) ---------------- */
+@font-face {
+  font-family: "Calistoga";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/calistoga-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Plus Jakarta Sans — satu file variable font untuk weight 400–800 */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ---------------- Token desain (@theme) ---------------- */
 @theme {
   /* Hijau pandan — warna utama */
@@ -105,7 +125,7 @@
   .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
 
   /* tombol — selalu pakai .btn + varian; min 48px (target sentuh) */
-  .btn { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-[0.95rem] font-bold transition-colors duration-200; }
+  .btn { @apply inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-[0.95rem] font-bold transition-colors duration-200; }
   .btn-primary { @apply bg-pandan-700 text-white shadow-soft hover:bg-pandan-800; }
   .btn-inverse { @apply bg-card text-pandan-800 shadow-soft hover:bg-pandan-100; }
   .btn-outline { @apply border border-line bg-card text-ink hover:border-pandan-600 hover:text-pandan-800; }
@@ -159,9 +179,23 @@
 /* ---------------- Status dinamis (diatur main.js) ---------------- */
 @layer components {
   .site-header.is-scrolled { @apply border-line bg-paper/95 shadow-soft backdrop-blur; }
+  /* Tanpa JS: header selalu berlatar solid + tombol menu (butuh JS) disembunyikan,
+     supaya teks konten tidak tembus dan tidak ada kontrol mati. */
+  html:not(.js) .site-header { background-color: var(--color-paper); }
+  html:not(.js) #tombol-menu { display: none; }
   [data-nav][aria-current="true"] { @apply text-pandan-800; }
   .to-top { @apply invisible fixed bottom-24 right-5 z-40 grid size-11 -translate-y-1 place-items-center rounded-full border border-line bg-card text-ink opacity-0 shadow-soft transition-all duration-300 hover:border-pandan-600 hover:text-pandan-800; }
   .to-top.is-show { @apply visible translate-y-0 opacity-100; }
+}
+
+/* ---------------- Hemat render awal (bagian bawah fold) ----------------
+   Ukuran intrinsik tetap dicadangkan agar tanpa lonjakan layout (CLS). */
+#menu,
+#galeri,
+#testimoni,
+#kontak {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 780px;
 }
 
 /* ---------------- Hormati reduced motion ---------------- */
@@ -176,6 +210,11 @@
 
 /* ---------------- Cetak (print) — konten selalu terlihat ---------------- */
 @media print {
+  #menu,
+  #galeri,
+  #testimoni,
+  #kontak { content-visibility: visible; }
+
   .animate-marquee,
   .marquee-track,
   .animate-float,
