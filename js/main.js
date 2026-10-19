@@ -92,7 +92,7 @@
     const bungkusGambar = el("div", "relative overflow-hidden");
     const img = el("img", "aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]");
     img.src = p.gambar;
-    img.alt = "Foto " + p.nama;
+    img.alt = "Ilustrasi " + p.nama;
     img.loading = "lazy";
     img.width = 400;
     img.height = 300;
@@ -103,7 +103,7 @@
     kartu.appendChild(bungkusGambar);
 
     const isi = el("div", "flex flex-1 flex-col p-5");
-    isi.appendChild(el("p", "text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-kunyit-700", labelKategori(p)));
+    isi.appendChild(el("p", "text-[0.75rem] font-extrabold uppercase tracking-[0.14em] text-kunyit-700", labelKategori(p)));
     isi.appendChild(el("h3", "mt-1.5 text-lg leading-snug font-bold", p.nama));
     isi.appendChild(el("p", "mt-2 text-sm leading-relaxed text-muted", p.deskripsi));
 
@@ -136,7 +136,7 @@
 
     /* keadaan kosong — bila kategori tidak punya produk */
     if (daftar.length === 0) {
-      const kosong = el("div", "col-span-full rounded-3xl border border-dashed border-line bg-card p-10 text-center");
+      const kosong = el("div", "col-span-full rounded-2xl border border-dashed border-line bg-card p-10 text-center");
       kosong.appendChild(el("p", "font-bold", "Belum ada menu di kategori ini."));
       const tanya = el("a", "btn btn-primary btn-sm mt-4", "Tanya menu via WhatsApp");
       tanya.href = tautanWa(pesanUmum());
@@ -202,8 +202,12 @@
   function renderGaleri() {
     const grid = $("#galeri-grid");
     if (!grid) return;
+    if (daftarGaleri.length === 0) {
+      grid.appendChild(el("p", "col-span-full rounded-2xl border border-dashed border-line bg-card p-8 text-center text-sm text-muted", "Belum ada foto di galeri."));
+      return;
+    }
     daftarGaleri.forEach((item, i) => {
-      const b = el("button", "group relative overflow-hidden rounded-3xl border border-line bg-card text-left transition-shadow duration-300 hover:shadow-lift");
+      const b = el("button", "group relative overflow-hidden rounded-2xl border border-line bg-card text-left transition-shadow duration-300 hover:shadow-lift");
       b.type = "button";
       b.setAttribute("data-reveal", "naik-" + ((i % 3) + 1));
       b.setAttribute("aria-label", "Perbesar: " + (item.caption || item.alt || "foto"));
@@ -250,7 +254,11 @@
   /* ---------- testimoni ---------- */
   function renderTestimoni() {
     const wadah = $("#testimoni-grid");
-    if (!wadah || !Array.isArray(UMKM.testimoni)) return;
+    if (!wadah) return;
+    if (!Array.isArray(UMKM.testimoni) || UMKM.testimoni.length === 0) {
+      wadah.appendChild(el("li", "col-span-full rounded-2xl border border-dashed border-line bg-card p-8 text-center text-sm text-muted", "Belum ada testimoni yang ditampilkan."));
+      return;
+    }
     UMKM.testimoni.forEach((t, i) => {
       const li = el("li", "card flex flex-col p-6 transition-shadow duration-300 hover:shadow-lift");
       li.setAttribute("data-reveal", "naik-" + ((i % 3) + 1));
@@ -280,7 +288,11 @@
   /* ---------- statistik ---------- */
   function renderStats() {
     const wadah = $("#tentang-stats");
-    if (!wadah || !Array.isArray(UMKM.stats)) return;
+    if (!wadah) return;
+    if (!Array.isArray(UMKM.stats) || UMKM.stats.length === 0) {
+      wadah.hidden = true;
+      return;
+    }
     UMKM.stats.forEach((s) => {
       const bungkus = el("div", "flex flex-col");
       bungkus.setAttribute("data-reveal", "naik-2");
@@ -344,7 +356,7 @@
   function renderPeta() {
     const fr = $("[data-peta]");
     if (fr && UMKM.mapsQuery) {
-      fr.src = "https://www.google.com/maps?q=" + encodeURIComponent(UMKM.mapsQuery) + "&z=14&output=embed";
+      fr.src = "https://www.google.com/maps?q=" + encodeURIComponent(UMKM.mapsQuery) + "&z=14&hl=id&output=embed";
     }
     const tautan = $("[data-maps-link]");
     if (tautan && UMKM.mapsQuery) {
@@ -419,13 +431,35 @@
           }
         });
         tautan.forEach((a) => {
-          if (teratas && a.getAttribute("href") === "#" + teratas.id) a.setAttribute("aria-current", "true");
+          if (teratas && a.getAttribute("href") === "#" + teratas.id) a.setAttribute("aria-current", "location");
           else a.removeAttribute("aria-current");
         });
       },
       { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.2, 0.5, 1] }
     );
     bagian.forEach((b) => io.observe(b));
+  }
+
+  /* ---------- tombol WhatsApp mengambang ----------
+     Muncul hanya setelah CTA WhatsApp di hero lewat viewport, supaya tidak
+     tampil dobel dengan tombol yang masih terlihat. */
+  function initWaFloat() {
+    const fab = $(".wa-float");
+    const pemicu = $("#atas .btn-primary");
+    if (!fab || !pemicu) return;
+    const atur = (tampil) => fab.classList.toggle("is-show", tampil);
+    if (!("IntersectionObserver" in window)) {
+      const saatGulir = () => atur(pemicu.getBoundingClientRect().bottom < 0);
+      window.addEventListener("scroll", saatGulir, { passive: true });
+      saatGulir();
+      return;
+    }
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => atur(!en.isIntersecting && en.boundingClientRect.bottom < 0));
+      },
+      { threshold: 0 }
+    ).observe(pemicu);
   }
 
   /* ---------- reveal saat scroll ---------- */
@@ -469,10 +503,12 @@
     renderPeta();
     initNav();
     initScrollspy();
+    initWaFloat();
     initLightbox();
     const tahun = $("#tahun");
     if (tahun) tahun.textContent = String(new Date().getFullYear());
     amatiReveal();
+    document.documentElement.classList.add("js-siap");
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mulai);

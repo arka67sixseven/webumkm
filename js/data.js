@@ -56,7 +56,7 @@ const UMKM = {
       satuan: "box",
       deskripsi: "Ayam bakar madu, tumis sayur, telur iris, dan sambal bawang. Lengkap dengan lalapan segar.",
       gambar: "assets/img/produk-nasi-box-ayam-bakar.svg",
-      label: "Best seller"
+      label: "Paling laris"
     },
     {
       id: "nasi-box-ayam-ungkep",
@@ -145,7 +145,7 @@ const UMKM = {
     },
     {
       nama: "Maria",
-      peran: "Mahasiswa, Kota Jogja",
+      peran: "Mahasiswa, Kota Yogyakarta",
       bintang: 5,
       kutipan: "Risoles frozen-nya penyelamat malam deadline. Tinggal goreng sebentar, rasanya seperti masakan rumah."
     }
@@ -153,7 +153,7 @@ const UMKM = {
 
   /* ---------- Galeri (ganti src dengan foto asli, mis. assets/img/dapur-1.jpg) ---------- */
   galeri: [
-    { src: "assets/img/galeri-dapur.svg", alt: "Ilustrasi dapur tempat memasak setiap pagi", caption: "Dimasak tiap pagi" },
+    { src: "assets/img/galeri-dapur.svg", alt: "Ilustrasi dapur tempat memasak setiap pagi", caption: "Dari dapur kami" },
     { src: "assets/img/galeri-meja.svg", alt: "Ilustrasi meja makan dengan menu rumahan lengkap", caption: "Menu rumahan lengkap" },
     { src: "assets/img/produk-tumpeng.svg", alt: "Ilustrasi tumpeng mini pesanan acara", caption: "Tumpeng pesanan acara" },
     { src: "assets/img/galeri-kemasan.svg", alt: "Ilustrasi kemasan pesanan yang rapi", caption: "Dikemas rapi & higienis" },

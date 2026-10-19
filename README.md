@@ -16,6 +16,8 @@ Tanpa framework, tanpa backend, tanpa database — bisa di-host gratis di Vercel
 - Galeri dengan **lightbox** (native `<dialog>`, bisa ditutup dengan Esc).
 - Peta lokasi *lazy-load* (Google Maps embed).
 - Animasi halus (reveal-on-scroll, marquee, uap hero) yang otomatis nonaktif bila pengguna meminta *reduced motion*.
+- Fallback tanpa JavaScript: konten statis tetap tampil dan tombol menu yang butuh JS disembunyikan otomatis. Bila `main.js` gagal dimuat, animasi reveal dibuka supaya teks tidak tertinggal transparan.
+- SEO dasar: `canonical`, Open Graph/Twitter, JSON-LD `FoodEstablishment`, plus `sitemap.xml` dan `robots.txt`.
 - Header keamanan produksi via `vercel.json` (CSP ketat, nosniff, HSTS, dll).
 
 ## Struktur Proyek
@@ -26,7 +28,7 @@ src/input.css         ← sumber Tailwind (token warna, font, komponen)
 css/style.css         ← hasil build (di-commit agar bisa deploy tanpa build step)
 js/data.js            ← ★ SEMUA DATA UMKM (edit di sini)
 js/main.js            ← logika halaman
-js/boot.js            ← penanda JS aktif (untuk animasi reveal)
+js/boot.js            ← penanda JS aktif + jaring pengaman bila main.js gagal
 assets/img/           ← ilustrasi & favicon (ganti dengan foto asli)
 scripts/security-audit.sh
 .github/workflows/ci.yml
@@ -63,9 +65,14 @@ Buka **`js/data.js`** — semua nilai dengan komentar `← GANTI` wajib diganti:
 
 Harga ditulis angka polos (`25000`) — otomatis diformat jadi `Rp 25.000`.
 
-> Teks paragraf yang tidak ada di `data.js` (hero, cerita \"Tentang Kami\", langkah \"Cara Pesan\", tahun \"sejak 2019\",
+> Teks paragraf yang tidak ada di `data.js` (hero, cerita "Tentang Kami", langkah "Cara Pesan", tahun "sejak 2019",
 > angka rating di hero) ditulis langsung di `index.html` — cari dan ubah di sana. Teks di `index.html` sengaja
 > di luar `data.js` agar bagian yang butuh sentuhan editorial tidak harus ikut terstruktur.
+>
+> Beberapa nilai identitas juga ditulis langsung di `index.html` sebagai fallback tanpa-JS dan data SEO —
+> ganti manual bila berubah: JSON-LD `FoodEstablishment` (nama, telepon, alamat, jam buka, Instagram),
+> `canonical`/`og:url`, tautan `https://wa.me/...` di header, hero, CTA, tombol mengambang, dan footer,
+> serta tautan `tel:`.
 
 ### Mengganti Gambar dengan Foto Asli
 
@@ -73,7 +80,8 @@ Harga ditulis angka polos (`25000`) — otomatis diformat jadi `Rp 25.000`.
 2. Perbarui `gambar` pada produk/galeri di `js/data.js`.
 3. Khusus foto hero & bagian "Tentang", ganti `src` di `index.html`
    (`assets/img/hero-art.svg` dan `assets/img/galeri-dapur.svg`).
-4. `alt` setiap gambar ikut diambil dari `data.js` pada bagian galeri — tulis deskripsi singkat.
+4. `alt` gambar galeri diambil dari `data.js`; `alt` produk dibuat otomatis dari `nama` dengan awalan
+   "Ilustrasi". Kalau produk diganti foto asli, sesuaikan juga teks `alt`-nya di `js/main.js`.
 
 ## Deploy
 

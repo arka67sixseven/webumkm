@@ -133,7 +133,7 @@
   .btn-sm { @apply min-h-11 px-5 text-sm; }
 
   /* kartu & chip */
-  .card { @apply rounded-3xl border border-line bg-card; }
+  .card { @apply rounded-2xl border border-line bg-card; }
   .chip { @apply inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-line bg-card px-4 text-sm font-semibold text-muted transition-colors hover:border-pandan-600 hover:text-pandan-800; }
   .chip[aria-pressed="true"] { @apply border-pandan-700 bg-pandan-700 text-white hover:text-white; }
 
@@ -172,7 +172,7 @@
   .skip-link:focus-visible { @apply translate-y-0; }
 
   /* lightbox galeri */
-  #lightbox { @apply m-auto w-[min(92vw,60rem)] max-w-none rounded-3xl border border-line bg-card p-0 shadow-lift; }
+  #lightbox { @apply m-auto w-[min(92vw,60rem)] max-w-none rounded-2xl border border-line bg-card p-0 shadow-lift; }
   #lightbox::backdrop { background: rgb(17 54 36 / 0.72); backdrop-filter: blur(3px); }
 }
 
@@ -180,13 +180,22 @@
 @layer components {
   .site-header.is-scrolled { @apply border-line bg-paper/95 shadow-soft backdrop-blur; }
   /* Tanpa JS: header selalu berlatar solid + tombol menu (butuh JS) disembunyikan,
-     supaya teks konten tidak tembus dan tidak ada kontrol mati. */
+     supaya teks konten tidak tembus dan tidak ada kontrol mati.
+     !important dipakai karena utility .grid ada di layer utilities (menang atas layer components). */
   html:not(.js) .site-header { background-color: var(--color-paper); }
-  html:not(.js) #tombol-menu { display: none; }
-  [data-nav][aria-current="true"] { @apply text-pandan-800; }
+  html:not(.js) #tombol-menu { display: none !important; }
   .to-top { @apply invisible fixed bottom-24 right-5 z-40 grid size-11 -translate-y-1 place-items-center rounded-full border border-line bg-card text-ink opacity-0 shadow-soft transition-all duration-300 hover:border-pandan-600 hover:text-pandan-800; }
   .to-top.is-show { @apply visible translate-y-0 opacity-100; }
+
+  /* FAB WhatsApp — disembunyikan sampai CTA hero lewat viewport (diatur main.js).
+     Tanpa JS tetap tersembunyi; hero & header sudah punya tombol WhatsApp sendiri. */
+  .wa-float { @apply invisible fixed bottom-5 right-5 z-40 inline-flex min-h-13 translate-y-2 items-center gap-2.5 rounded-full bg-pandan-700 px-5 text-sm font-bold text-white shadow-lift opacity-0 transition-all duration-300 hover:bg-pandan-800; }
+  .wa-float.is-show { @apply visible translate-y-0 opacity-100; }
 }
+
+/* Link nav yang sedang aktif (scrollspy) — di luar @layer agar menang atas
+   utility `text-muted` pada elemen yang sama (utilities selalu di atas components). */
+[data-nav][aria-current="location"] { color: var(--color-pandan-800); }
 
 /* ---------------- Hemat render awal (bagian bawah fold) ----------------
    Ukuran intrinsik tetap dicadangkan agar tanpa lonjakan layout (CLS). */
