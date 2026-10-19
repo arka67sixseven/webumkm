@@ -3,7 +3,7 @@
 Landing page **statis** untuk UMKM katering rumahan & frozen food: HTML + Tailwind CSS v4 + JavaScript murni.
 Tanpa framework, tanpa backend, tanpa database — bisa di-host gratis di Vercel/Netlify/GitHub Pages.
 
-🌐 **Demo live:** <https://webumkm-lilajayyyy.vercel.app>
+🌐 **Demo live:** <https://webumkm-delta.vercel.app>
 
 > ⚠️ **Semua data di situs ini masih CONTOH** (nama, nomor WA, alamat, harga, gambar ilustrasi).
 > Ganti dengan data asli sebelum dipublikasikan — caranya ada di [Mengganti Data](#mengganti-data).
@@ -80,7 +80,10 @@ Harga ditulis angka polos (`25000`) — otomatis diformat jadi `Rp 25.000`.
 1. **GitHub**: `git push` — CI menjalankan build, `npm audit`, gitleaks, dan semgrep.
 2. **Vercel**: proyek sudah terhubung ke repo ini — setiap push ke `main` otomatis deploy.
    Build memakai `npm run vercel-build` (CSS + salin aset ke `public/`); header keamanan dari `vercel.json` aktif.
-3. Situs live: <https://webumkm-lilajayyyy.vercel.app>
+3. Situs live: <https://webumkm-delta.vercel.app>
+   Catatan SEO: **alias tim** (`webumkm-lilajayyyy.vercel.app`) dan URL deployment selalu membawa
+   `x-robots-tag: noindex` dari Vercel. Untuk SEO gunakan **domain proyek** (`webumkm-delta.vercel.app`)
+   atau custom domain — jangan pakai alias tim sebagai URL kanonis.
 4. Setelah punya domain sendiri, perbarui URL absolut di `index.html` (`canonical`, `og:url`, `og:image`),
    `sitemap.xml`, dan `robots.txt` — lalu daftarkan ke Google Search Console.
 
