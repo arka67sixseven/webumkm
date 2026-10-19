@@ -7,7 +7,8 @@
     "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
     "dev": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
     "serve": "python3 -m http.server 4321",
-    "security": "bash scripts/security-audit.sh"
+    "security": "bash scripts/security-audit.sh",
+    "vercel-build": "npm run build && node scripts/build-vercel.mjs"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
