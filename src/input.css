@@ -1,0 +1,185 @@
+/* ============================================================
+   Dapur Bu Sari — sumber Tailwind CSS v4
+   Build : npm run build → css/style.css (minified)
+   Dev   : npm run dev   → watch mode
+   Token & komponen desain terpusat di file ini.
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* Jangan memindai hasil build (mencegah kelas "basi" ikut terbawa) */
+@source not "../css";
+
+/* ---------------- Token desain (@theme) ---------------- */
+@theme {
+  /* Hijau pandan — warna utama */
+  --color-pandan-50: #F0F7F1;
+  --color-pandan-100: #DCEDE1;
+  --color-pandan-200: #BBDCC6;
+  --color-pandan-300: #90C3A3;
+  --color-pandan-400: #61A77E;
+  --color-pandan-500: #3C8B5D;
+  --color-pandan-600: #2A7048;
+  --color-pandan-700: #1E5C3A;
+  --color-pandan-800: #17492F;
+  --color-pandan-900: #113624;
+
+  /* Kuning kunyit — aksen hangat */
+  --color-kunyit-50: #FDF6E3;
+  --color-kunyit-100: #FAEBC6;
+  --color-kunyit-200: #F6DE9F;
+  --color-kunyit-300: #F0C25E;
+  --color-kunyit-400: #E9A83B;
+  --color-kunyit-500: #D98E1B;
+  --color-kunyit-600: #B8730F;
+  --color-kunyit-700: #925A0B;
+
+  /* Merah cabai — aksen berani (badge/bintang promo) */
+  --color-cabai-50: #FDF0EC;
+  --color-cabai-100: #FBE7E1;
+  --color-cabai-500: #D2492E;
+  --color-cabai-600: #B93A21;
+  --color-cabai-700: #9A2F1A;
+
+  /* Netral hangat ("kertas beras") */
+  --color-paper: #FAF7EF;
+  --color-card: #FFFFFF;
+  --color-ink: #252B20;
+  --color-muted: #5D6455;
+  --color-line: #E6E1D2;
+  --color-tint: #F0F4E9;
+
+  /* Tipografi */
+  --font-display: "Calistoga", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Skala heading fluid */
+  --text-hero: clamp(2.35rem, 4.6vw + 1rem, 4.05rem);
+  --text-hero--line-height: 1.05;
+  --text-hero--letter-spacing: -0.015em;
+  --text-h2: clamp(1.7rem, 2.4vw + 0.7rem, 2.45rem);
+  --text-h2--line-height: 1.14;
+  --text-h2--letter-spacing: -0.01em;
+
+  /* Bayangan lembut */
+  --shadow-soft: 0 10px 30px -14px rgb(37 43 32 / 0.16);
+  --shadow-lift: 0 24px 48px -24px rgb(37 43 32 / 0.30);
+
+  /* Animasi */
+  --animate-marquee: marquee 36s linear infinite;
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out 1.4s infinite;
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+  }
+}
+
+/* ---------------- Dasar ---------------- */
+@layer base {
+  :root { color-scheme: light; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem; /* offset header sticky saat lompat anchor */
+  }
+
+  body { @apply bg-paper font-sans text-ink antialiased; }
+
+  ::selection { background-color: var(--color-kunyit-200); color: var(--color-ink); }
+
+  :focus-visible { outline: 3px solid var(--color-pandan-600); outline-offset: 2px; border-radius: 8px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, ::before, ::after { transition-duration: 0.01ms !important; }
+  }
+}
+
+/* ---------------- Komponen ---------------- */
+@layer components {
+  /* wadah konten */
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+
+  /* tombol — selalu pakai .btn + varian; min 48px (target sentuh) */
+  .btn { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-[0.95rem] font-bold transition-colors duration-200; }
+  .btn-primary { @apply bg-pandan-700 text-white shadow-soft hover:bg-pandan-800; }
+  .btn-inverse { @apply bg-card text-pandan-800 shadow-soft hover:bg-pandan-100; }
+  .btn-outline { @apply border border-line bg-card text-ink hover:border-pandan-600 hover:text-pandan-800; }
+  .btn-outline-light { @apply border border-white/35 text-white hover:border-white hover:bg-white/10; }
+  .btn-sm { @apply min-h-11 px-5 text-sm; }
+
+  /* kartu & chip */
+  .card { @apply rounded-3xl border border-line bg-card; }
+  .chip { @apply inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-line bg-card px-4 text-sm font-semibold text-muted transition-colors hover:border-pandan-600 hover:text-pandan-800; }
+  .chip[aria-pressed="true"] { @apply border-pandan-700 bg-pandan-700 text-white hover:text-white; }
+
+  /* label kecil */
+  .eyebrow { @apply text-xs font-extrabold uppercase tracking-[0.18em] text-pandan-700; }
+
+  /* strip motif batik kawung (Yogyakarta) */
+  .batik-strip {
+    height: 0.875rem;
+    background-image: url("../assets/img/batik-strip.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 100%;
+  }
+  .batik-strip-light { background-image: url("../assets/img/batik-strip-light.svg"); }
+
+  /* strip menu berjalan (marquee) */
+  .marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+  .marquee-track { display: flex; width: max-content; animation: var(--animate-marquee); }
+  .marquee-grup { display: flex; align-items: center; gap: 2.75rem; padding-right: 2.75rem; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+
+  /* reveal saat scroll — hanya aktif bila JS tersedia (.js di <html>) */
+  .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease-out, transform 0.55s ease-out; }
+  .js [data-reveal].is-visible { opacity: 1; transform: none; }
+  .js [data-reveal="naik-2"] { transition-delay: 90ms; }
+  .js [data-reveal="naik-3"] { transition-delay: 180ms; }
+  .js [data-reveal="naik-4"] { transition-delay: 270ms; }
+
+  /* skip link (aksesibilitas keyboard) */
+  .skip-link { @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-pandan-900 px-5 py-3 text-sm font-bold text-white transition-transform duration-200; }
+  .skip-link:focus-visible { @apply translate-y-0; }
+
+  /* lightbox galeri */
+  #lightbox { @apply m-auto w-[min(92vw,60rem)] max-w-none rounded-3xl border border-line bg-card p-0 shadow-lift; }
+  #lightbox::backdrop { background: rgb(17 54 36 / 0.72); backdrop-filter: blur(3px); }
+}
+
+/* ---------------- Status dinamis (diatur main.js) ---------------- */
+@layer components {
+  .site-header.is-scrolled { @apply border-line bg-paper/95 shadow-soft backdrop-blur; }
+  [data-nav][aria-current="true"] { @apply text-pandan-800; }
+  .to-top { @apply invisible fixed bottom-24 right-5 z-40 grid size-11 -translate-y-1 place-items-center rounded-full border border-line bg-card text-ink opacity-0 shadow-soft transition-all duration-300 hover:border-pandan-600 hover:text-pandan-800; }
+  .to-top.is-show { @apply visible translate-y-0 opacity-100; }
+}
+
+/* ---------------- Hormati reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .marquee-track,
+  .animate-float,
+  .animate-float-slow { animation: none !important; }
+
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------------- Cetak (print) — konten selalu terlihat ---------------- */
+@media print {
+  .animate-marquee,
+  .marquee-track,
+  .animate-float,
+  .animate-float-slow { animation: none !important; }
+
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; }
+}

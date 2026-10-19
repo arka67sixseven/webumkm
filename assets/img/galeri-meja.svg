@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <title>Meja makan dengan menu rumahan lengkap</title>
+  <rect width="400" height="300" fill="#F7F4EA"/>
+
+  <!-- meja -->
+  <circle cx="200" cy="150" r="122" fill="#FAEBC6"/>
+  <circle cx="200" cy="150" r="106" fill="#FDF6E3"/>
+
+  <!-- piring utama -->
+  <circle cx="200" cy="150" r="56" fill="#FFFFFF"/>
+  <circle cx="200" cy="150" r="42" fill="#FFFDF4"/>
+  <g>
+    <circle cx="186" cy="140" r="8" fill="#BF7A3E"/>
+    <circle cx="214" cy="136" r="7" fill="#61A77E"/>
+    <circle cx="220" cy="162" r="7" fill="#E9A83B"/>
+    <circle cx="184" cy="166" r="7" fill="#D2492E"/>
+    <circle cx="202" cy="176" r="6" fill="#BBDCC6"/>
+    <circle cx="204" cy="148" r="6" fill="#F0C25E"/>
+  </g>
+  <g fill="#EAE2CB">
+    <circle cx="176" cy="152" r="2"/>
+    <circle cx="226" cy="146" r="2"/>
+    <circle cx="196" cy="128" r="2"/>
+  </g>
+
+  <!-- piring samping -->
+  <circle cx="128" cy="102" r="24" fill="#FFFFFF"/>
+  <circle cx="128" cy="102" r="13" fill="#B93A21"/>
+  <circle cx="272" cy="102" r="24" fill="#FFFFFF"/>
+  <circle cx="272" cy="102" r="13" fill="#61A77E"/>
+  <circle cx="200" cy="232" r="24" fill="#FFFFFF"/>
+  <circle cx="200" cy="232" r="13" fill="#FFFDF4"/>
+  <circle cx="200" cy="232" r="7" fill="#E9A83B"/>
+
+  <!-- kilau -->
+  <g fill="#E9A83B">
+    <path d="M0 -9 L2.3 -2.3 L9 0 L2.3 2.3 L0 9 L-2.3 2.3 L-9 0 L-2.3 -2.3 Z" transform="translate(332 228)"/>
+    <path d="M0 -9 L2.3 -2.3 L9 0 L2.3 2.3 L0 9 L-2.3 2.3 L-9 0 L-2.3 -2.3 Z" transform="translate(66 222) scale(0.7)"/>
+  </g>
+</svg>

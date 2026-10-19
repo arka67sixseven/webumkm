@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <title>Dapur tempat masak setiap pagi</title>
+  <rect width="400" height="300" fill="#F7F4EA"/>
+
+  <!-- dinding keramik -->
+  <rect x="84" y="44" width="232" height="80" rx="12" fill="#F0F4E9"/>
+  <g stroke="#BBDCC6" stroke-width="3">
+    <line x1="142" y1="44" x2="142" y2="124"/>
+    <line x1="200" y1="44" x2="200" y2="124"/>
+    <line x1="258" y1="44" x2="258" y2="124"/>
+    <line x1="84" y1="84" x2="316" y2="84"/>
+  </g>
+
+  <!-- uap -->
+  <g stroke="#BBDCC6" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M182 156 c-10 -16 6 -26 -2 -44"/>
+    <path d="M232 152 c-10 -16 6 -26 -2 -44"/>
+  </g>
+
+  <!-- kompor -->
+  <rect x="104" y="200" width="192" height="56" rx="14" fill="#E6E1D2"/>
+  <circle cx="132" cy="228" r="7" fill="#1E5C3A"/>
+  <circle cx="162" cy="228" r="7" fill="#1E5C3A"/>
+
+  <!-- wajan -->
+  <ellipse cx="212" cy="188" rx="86" ry="24" fill="#252B20"/>
+  <ellipse cx="212" cy="188" rx="66" ry="16" fill="#3A4234"/>
+  <ellipse cx="212" cy="186" rx="52" ry="11" fill="#F0C25E"/>
+  <g fill="#E9A83B">
+    <circle cx="190" cy="184" r="3"/>
+    <circle cx="214" cy="190" r="3"/>
+    <circle cx="234" cy="184" r="3"/>
+  </g>
+  <g fill="#61A77E">
+    <path d="M196 192 q8 -6 14 -1 q-5 6 -12 5 z"/>
+    <path d="M226 194 q7 -5 12 -1 q-4 5 -10 4 z"/>
+  </g>
+  <rect x="292" y="180" width="62" height="13" rx="6.5" fill="#B8730F"/>
+
+  <!-- sendok kayu -->
+  <g transform="rotate(18 104 200)">
+    <rect x="98" y="118" width="12" height="88" rx="6" fill="#C08A3E"/>
+    <ellipse cx="104" cy="214" rx="16" ry="12" fill="#C08A3E"/>
+  </g>
+
+  <!-- cabai & bawang di meja -->
+  <path d="M118 266 c-3 -12 4 -22 12 -22 c6 0 8 4 5 8 c-4 6 -8 11 -10 16 c-1 3 -6 2 -7 -2 z" fill="#D2492E"/>
+  <circle cx="330" cy="262" r="10" fill="#FFFFFF" stroke="#E6E1D2" stroke-width="2"/>
+</svg>

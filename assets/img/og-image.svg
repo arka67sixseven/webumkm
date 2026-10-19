@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FAF7EF"/>
+  <circle cx="880" cy="330" r="248" fill="#F0F4E9"/>
+
+  <!-- piring & mangkuk utama -->
+  <ellipse cx="880" cy="512" rx="240" ry="28" fill="#E6E1D2" opacity="0.85"/>
+  <path d="M732 366 C740 458 792 508 880 508 C968 508 1020 458 1028 366 Z" fill="#FFFFFF"/>
+  <ellipse cx="880" cy="492" rx="105" ry="14" fill="#F6F1E3" opacity="0.8"/>
+  <rect x="720" y="352" width="320" height="26" rx="13" fill="#FFFFFF"/>
+  <rect x="728" y="360" width="304" height="10" rx="5" fill="#DCEDE1"/>
+  <ellipse cx="880" cy="346" rx="140" ry="48" fill="#FFFDF4"/>
+
+  <!-- lauk -->
+  <path d="M865 315 c-4 -18 10 -32 30 -33 c3 16 -8 30 -30 33 z" fill="#61A77E"/>
+  <path d="M912 311 c-2 -15 10 -26 26 -26 c2 13 -8 24 -26 26 z" fill="#3C8B5D"/>
+  <path d="M772 332 c-8 -22 14 -36 38 -33 c20 3 32 15 27 31 c-5 15 -25 22 -43 19 c-13 -2 -19 -8 -22 -17 z" fill="#BF7A3E"/>
+  <g stroke="#9C5E2B" stroke-width="3" stroke-linecap="round">
+    <path d="M792 315 l14 -4"/>
+    <path d="M805 328 l16 -3"/>
+  </g>
+  <circle cx="955" cy="328" r="24" fill="#FFFFFF"/>
+  <circle cx="955" cy="328" r="13.5" fill="#E9A83B"/>
+  <circle cx="988" cy="342" r="16" fill="#FFFFFF"/>
+  <circle cx="988" cy="342" r="9" fill="#E9A83B"/>
+  <path d="M1006 314 c-2 -8 6 -14 14 -12 c8 2 10 10 4 15 c-7 5 -16 3 -18 -3 z" fill="#D2492E"/>
+  <circle cx="806" cy="360" r="15" fill="#D2492E"/>
+  <circle cx="806" cy="360" r="9.5" fill="#F2A98F"/>
+  <circle cx="843" cy="374" r="10.5" fill="#BBDCC6"/>
+  <circle cx="843" cy="374" r="4.5" fill="#DCEDE1"/>
+  <circle cx="862" cy="377" r="10.5" fill="#BBDCC6"/>
+  <circle cx="862" cy="377" r="4.5" fill="#DCEDE1"/>
+
+  <!-- uap -->
+  <g stroke="#BBDCC6" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M856 276 c-14 -22 8 -36 -4 -62"/>
+    <path d="M890 266 c-14 -24 10 -38 -2 -64"/>
+    <path d="M922 276 c-12 -20 8 -34 -2 -56"/>
+  </g>
+
+  <!-- kilau -->
+  <g fill="#E9A83B">
+    <path d="M0 -10 L2.6 -2.6 L10 0 L2.6 2.6 L0 10 L-2.6 2.6 L-10 0 L-2.6 -2.6 Z" transform="translate(740 180)"/>
+    <path d="M0 -10 L2.6 -2.6 L10 0 L2.6 2.6 L0 10 L-2.6 2.6 L-10 0 L-2.6 -2.6 Z" transform="translate(1070 150) scale(0.8)"/>
+  </g>
+
+  <!-- teks -->
+  <rect x="90" y="86" width="330" height="46" rx="23" fill="#DCEDE1"/>
+  <text x="112" y="116" font-family="sans-serif" font-size="22" font-weight="bold" fill="#17492F">Katering rumahan sejak 2019</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="76" font-weight="bold" fill="#1E5C3A">Dapur Bu Sari</text>
+  <text x="90" y="292" font-family="sans-serif" font-size="30" fill="#5D6455">Masakan rumahan, hangat sampai ke pintumu.</text>
+  <rect x="90" y="352" width="346" height="66" rx="33" fill="#1E5C3A"/>
+  <text x="263" y="394" font-family="sans-serif" font-size="25" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Pesan via WhatsApp</text>
+  <text x="90" y="490" font-family="sans-serif" font-size="28" font-weight="bold" fill="#925A0B">0812-0000-0000</text>
+  <text x="90" y="528" font-family="sans-serif" font-size="24" fill="#5D6455">Nasi box · Tumpeng · Sambal botol · Frozen food</text>
+  <text x="90" y="566" font-family="sans-serif" font-size="22" fill="#5D6455">Sleman, Yogyakarta</text>
+
+  <!-- strip batik -->
+  <g fill="#1E5C3A" fill-opacity="0.16">
+    <circle cx="600" cy="616" r="5"/><circle cx="620" cy="616" r="5"/><circle cx="640" cy="616" r="5"/><circle cx="660" cy="616" r="5"/><circle cx="680" cy="616" r="5"/>
+    <circle cx="700" cy="616" r="5"/><circle cx="720" cy="616" r="5"/><circle cx="740" cy="616" r="5"/><circle cx="760" cy="616" r="5"/><circle cx="780" cy="616" r="5"/>
+    <circle cx="800" cy="616" r="5"/><circle cx="820" cy="616" r="5"/><circle cx="840" cy="616" r="5"/><circle cx="860" cy="616" r="5"/><circle cx="880" cy="616" r="5"/>
+    <circle cx="900" cy="616" r="5"/><circle cx="920" cy="616" r="5"/><circle cx="940" cy="616" r="5"/><circle cx="960" cy="616" r="5"/><circle cx="980" cy="616" r="5"/>
+    <circle cx="1000" cy="616" r="5"/><circle cx="1020" cy="616" r="5"/><circle cx="1040" cy="616" r="5"/><circle cx="1060" cy="616" r="5"/><circle cx="1080" cy="616" r="5"/>
+    <circle cx="1100" cy="616" r="5"/><circle cx="1120" cy="616" r="5"/>
+  </g>
+</svg>

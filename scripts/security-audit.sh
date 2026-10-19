@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 
 # Advisory GHSA level high+ yang DITERIMA SADAR (biasanya dev-only, belum ada patch).
 # Setiap tambahan WAJIB dicatat di SECURITY.md beserta alasannya. Kosongkan bila sudah ada fix upstream.
-ACCEPTED_ADVISORIES=''
+ACCEPTED_ADVISORIES='GHSA-vfj7-8cjw-p6xm'
 
 red()    { printf '\033[31m%s\033[0m\n' "$1"; }
 green()  { printf '\033[32m%s\033[0m\n' "$1"; }

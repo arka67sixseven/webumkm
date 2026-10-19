@@ -1,0 +1,16 @@
+{
+  "name": "webumkm-dapur-bu-sari",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page statis untuk UMKM lokal (katering rumahan) — HTML + Tailwind CSS v4 + JavaScript murni.",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "serve": "python3 -m http.server 4321",
+    "security": "bash scripts/security-audit.sh"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

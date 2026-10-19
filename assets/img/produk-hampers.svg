@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <title>Hampers kecil</title>
+  <rect width="400" height="300" fill="#F7F4EA"/>
+  <circle cx="200" cy="150" r="106" fill="#FFFFFF" fill-opacity="0.55"/>
+  <ellipse cx="200" cy="248" rx="120" ry="14" fill="#1E5C3A" fill-opacity="0.08"/>
+
+  <!-- isi mengintip -->
+  <circle cx="152" cy="116" r="17" fill="#E8B25C"/>
+  <g fill="#A97430">
+    <circle cx="146" cy="110" r="2.2"/>
+    <circle cx="158" cy="112" r="2.2"/>
+    <circle cx="152" cy="122" r="2.2"/>
+    <circle cx="160" cy="121" r="2.2"/>
+  </g>
+  <rect x="234" y="92" width="36" height="40" rx="8" fill="#FFFFFF"/>
+  <rect x="230" y="82" width="44" height="14" rx="7" fill="#B93A21"/>
+  <rect x="238" y="112" width="28" height="20" rx="5" fill="#B93A21"/>
+
+  <!-- kotak -->
+  <rect x="118" y="132" width="164" height="108" rx="14" fill="#FAEBC6"/>
+  <rect x="110" y="112" width="180" height="38" rx="10" fill="#F6DE9F"/>
+  <rect x="192" y="112" width="16" height="128" fill="#B93A21"/>
+
+  <!-- pita -->
+  <ellipse cx="178" cy="112" rx="18" ry="12" transform="rotate(-20 178 112)" fill="#D2492E"/>
+  <ellipse cx="222" cy="112" rx="18" ry="12" transform="rotate(20 222 112)" fill="#D2492E"/>
+  <circle cx="200" cy="112" r="8" fill="#9A2F1A"/>
+
+  <!-- stiker kawung -->
+  <circle cx="200" cy="196" r="23" fill="#1E5C3A"/>
+  <g fill="#FFFFFF">
+    <circle cx="200" cy="188" r="5.5"/>
+    <circle cx="200" cy="204" r="5.5"/>
+    <circle cx="192" cy="196" r="5.5"/>
+    <circle cx="208" cy="196" r="5.5"/>
+    <circle cx="200" cy="196" r="3"/>
+  </g>
+
+  <path d="M300 232 c-2 -9 7 -16 16 -16 c1 8 -6 15 -16 16 z" fill="#3C8B5D"/>
+</svg>

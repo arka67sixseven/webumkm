@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <title>Tumpeng mini</title>
+  <rect width="400" height="300" fill="#F7F4EA"/>
+  <circle cx="200" cy="150" r="106" fill="#FFFFFF" fill-opacity="0.55"/>
+  <ellipse cx="200" cy="246" rx="118" ry="15" fill="#1E5C3A" fill-opacity="0.08"/>
+
+  <ellipse cx="200" cy="232" rx="118" ry="24" fill="#61A77E"/>
+  <ellipse cx="200" cy="232" rx="96" ry="16" fill="#3C8B5D"/>
+
+  <path d="M200 74 C208 126 240 180 252 212 L148 212 C160 180 192 126 200 74 Z" fill="#F0C25E"/>
+  <g stroke="#E9A83B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.95">
+    <path d="M176 168 q10 -6 20 -4"/>
+    <path d="M196 128 q9 -5 18 -3"/>
+    <path d="M204 194 q10 -5 18 -3"/>
+  </g>
+  <path d="M200 74 c-3 -10 6 -18 16 -19 c2 10 -5 18 -16 19 z" fill="#3C8B5D"/>
+
+  <circle cx="108" cy="228" r="15" fill="#FFFFFF"/>
+  <circle cx="108" cy="228" r="8" fill="#B93A21"/>
+  <circle cx="152" cy="244" r="15" fill="#FFFFFF"/>
+  <circle cx="152" cy="244" r="8" fill="#61A77E"/>
+  <circle cx="248" cy="244" r="15" fill="#FFFFFF"/>
+  <circle cx="248" cy="244" r="8" fill="#E9A83B"/>
+  <circle cx="292" cy="228" r="15" fill="#FFFFFF"/>
+  <circle cx="292" cy="228" r="8" fill="#BF7A3E"/>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="560" viewBox="0 0 640 560">
+  <title>Ilustrasi semangkuk nasi dengan lauk ayam bakar, telur, dan sambal</title>
+  <style>
+    .steam path { animation: steam 3.8s ease-in-out infinite; }
+    .steam path:nth-child(2) { animation-delay: 0.6s; }
+    .steam path:nth-child(3) { animation-delay: 1.2s; }
+    @keyframes steam {
+      0%, 100% { opacity: 0.3; transform: translateY(5px); }
+      50% { opacity: 0.85; transform: translateY(-7px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .steam path { animation: none; opacity: 0.55; }
+    }
+  </style>
+
+  <defs>
+    <g id="kawung" fill="#1E5C3A" fill-opacity="0.12">
+      <circle cx="0" cy="-11" r="8"/>
+      <circle cx="0" cy="11" r="8"/>
+      <circle cx="-11" cy="0" r="8"/>
+      <circle cx="11" cy="0" r="8"/>
+      <circle cx="0" cy="0" r="4.5"/>
+    </g>
+    <g id="kilau" fill="#E9A83B">
+      <path d="M0 -10 L2.6 -2.6 L10 0 L2.6 2.6 L0 10 L-2.6 2.6 L-10 0 L-2.6 -2.6 Z"/>
+    </g>
+  </defs>
+
+  <!-- latar -->
+  <circle cx="320" cy="292" r="254" fill="#F0F4E9"/>
+  <use href="#kawung" transform="translate(96 120)"/>
+  <use href="#kawung" transform="translate(556 170)"/>
+  <use href="#kawung" transform="translate(70 392)"/>
+  <use href="#kawung" transform="translate(575 430)"/>
+  <ellipse cx="320" cy="488" rx="240" ry="28" fill="#E6E1D2" opacity="0.85"/>
+
+  <!-- mangkuk utama -->
+  <path d="M172 336 C180 428 232 478 320 478 C408 478 460 428 468 336 Z" fill="#FFFFFF"/>
+  <ellipse cx="320" cy="462" rx="105" ry="14" fill="#F6F1E3" opacity="0.8"/>
+  <rect x="160" y="322" width="320" height="26" rx="13" fill="#FFFFFF"/>
+  <rect x="168" y="330" width="304" height="10" rx="5" fill="#DCEDE1"/>
+
+  <!-- nasi -->
+  <ellipse cx="320" cy="316" rx="140" ry="48" fill="#FFFDF4"/>
+  <g stroke="#EAE2CB" stroke-width="2.5" fill="none" opacity="0.9" stroke-linecap="round">
+    <path d="M255 300 q10 -8 22 -4"/>
+    <path d="M290 285 q12 -9 26 -4"/>
+    <path d="M335 282 q12 -9 26 -3"/>
+    <path d="M372 297 q9 -7 20 -3"/>
+    <path d="M300 318 q12 -8 24 -3"/>
+  </g>
+  <g fill="#EAE2CB">
+    <circle cx="270" cy="315" r="2"/>
+    <circle cx="350" cy="325" r="2"/>
+    <circle cx="310" cy="332" r="2"/>
+  </g>
+
+  <!-- lauk pauk -->
+  <path d="M305 285 c-4 -18 10 -32 30 -33 c3 16 -8 30 -30 33 z" fill="#61A77E"/>
+  <path d="M352 281 c-2 -15 10 -26 26 -26 c2 13 -8 24 -26 26 z" fill="#3C8B5D"/>
+  <path d="M212 302 c-8 -22 14 -36 38 -33 c20 3 32 15 27 31 c-5 15 -25 22 -43 19 c-13 -2 -19 -8 -22 -17 z" fill="#BF7A3E"/>
+  <g stroke="#9C5E2B" stroke-width="3" stroke-linecap="round">
+    <path d="M232 285 l14 -4"/>
+    <path d="M245 298 l16 -3"/>
+  </g>
+  <circle cx="395" cy="298" r="24" fill="#FFFFFF"/>
+  <circle cx="395" cy="298" r="13.5" fill="#E9A83B"/>
+  <circle cx="428" cy="312" r="16" fill="#FFFFFF"/>
+  <circle cx="428" cy="312" r="9" fill="#E9A83B"/>
+  <path d="M446 284 c-2 -8 6 -14 14 -12 c8 2 10 10 4 15 c-7 5 -16 3 -18 -3 z" fill="#D2492E"/>
+  <circle cx="246" cy="330" r="15" fill="#D2492E"/>
+  <circle cx="246" cy="330" r="9.5" fill="#F2A98F"/>
+  <g fill="#FBE7E1">
+    <circle cx="242" cy="327" r="1.4"/>
+    <circle cx="250" cy="327" r="1.4"/>
+    <circle cx="246" cy="334" r="1.4"/>
+    <circle cx="241" cy="332" r="1.4"/>
+    <circle cx="251" cy="332" r="1.4"/>
+  </g>
+  <circle cx="283" cy="344" r="10.5" fill="#BBDCC6"/>
+  <circle cx="283" cy="344" r="4.5" fill="#DCEDE1"/>
+  <circle cx="302" cy="347" r="10.5" fill="#BBDCC6"/>
+  <circle cx="302" cy="347" r="4.5" fill="#DCEDE1"/>
+
+  <!-- uap -->
+  <g class="steam" stroke="#BBDCC6" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M296 246 c-14 -22 8 -36 -4 -62"/>
+    <path d="M330 236 c-14 -24 10 -38 -2 -64"/>
+    <path d="M362 246 c-12 -20 8 -34 -2 -56"/>
+  </g>
+
+  <!-- mangkuk sambal -->
+  <path d="M106 452 C110 492 128 508 150 508 C172 508 190 492 194 452 Z" fill="#FFFFFF"/>
+  <rect x="100" y="444" width="100" height="20" rx="10" fill="#FFFFFF"/>
+  <rect x="105" y="449" width="90" height="8" rx="4" fill="#DCEDE1"/>
+  <ellipse cx="150" cy="452" rx="38" ry="10" fill="#B93A21"/>
+  <g fill="#D2492E">
+    <path d="M132 448 q8 -6 14 -1 q-5 7 -12 5 z"/>
+    <path d="M158 447 q7 -5 12 -1 q-4 6 -11 5 z"/>
+  </g>
+  <g fill="#FBE7E1">
+    <circle cx="146" cy="454" r="1.3"/>
+    <circle cx="156" cy="452" r="1.3"/>
+  </g>
+
+  <!-- piring risoles -->
+  <ellipse cx="492" cy="470" rx="96" ry="26" fill="#FFFFFF"/>
+  <ellipse cx="492" cy="470" rx="74" ry="17" fill="#FBF8EE"/>
+  <g transform="rotate(-8 466 458)">
+    <rect x="430" y="446" width="72" height="24" rx="12" fill="#E8B25C"/>
+    <g fill="#D0923F">
+      <circle cx="452" cy="456" r="1.6"/>
+      <circle cx="468" cy="460" r="1.6"/>
+      <circle cx="482" cy="454" r="1.6"/>
+    </g>
+  </g>
+  <g transform="rotate(6 520 470)">
+    <rect x="484" y="458" width="72" height="24" rx="12" fill="#E8B25C"/>
+    <g fill="#D0923F">
+      <circle cx="506" cy="468" r="1.6"/>
+      <circle cx="522" cy="472" r="1.6"/>
+      <circle cx="536" cy="466" r="1.6"/>
+    </g>
+  </g>
+  <g transform="rotate(-18 495 440)">
+    <rect x="462" y="430" width="64" height="20" rx="10" fill="#E8B25C"/>
+    <g fill="#D0923F">
+      <circle cx="484" cy="438" r="1.5"/>
+      <circle cx="500" cy="442" r="1.5"/>
+    </g>
+  </g>
+  <path d="M420 462 c-2 -10 8 -18 20 -19 c2 10 -6 18 -20 19 z" fill="#3C8B5D"/>
+
+  <!-- kilau -->
+  <use href="#kilau" transform="translate(180 150)"/>
+  <use href="#kilau" transform="translate(510 120) scale(0.8)"/>
+  <use href="#kilau" transform="translate(560 300) scale(0.6)"/>
+  <use href="#kilau" transform="translate(90 480) scale(0.7)"/>
+</svg>

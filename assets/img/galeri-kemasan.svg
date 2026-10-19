@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <title>Kemasan pesanan siap diantar</title>
+  <rect width="400" height="300" fill="#F7F4EA"/>
+  <circle cx="200" cy="150" r="106" fill="#FFFFFF" fill-opacity="0.55"/>
+  <ellipse cx="200" cy="258" rx="118" ry="14" fill="#1E5C3A" fill-opacity="0.08"/>
+
+  <!-- kantong -->
+  <path d="M168 108 c0 -26 64 -26 64 0" stroke="#B8730F" stroke-width="7" fill="none"/>
+  <path d="M142 128 L258 128 L248 252 L152 252 Z" fill="#FAEBC6"/>
+  <rect x="134" y="108" width="132" height="32" rx="10" fill="#F6DE9F"/>
+
+  <!-- stiker logo kawung -->
+  <circle cx="200" cy="182" r="30" fill="#1E5C3A"/>
+  <g fill="#FFFFFF">
+    <circle cx="200" cy="172" r="7"/>
+    <circle cx="200" cy="192" r="7"/>
+    <circle cx="190" cy="182" r="7"/>
+    <circle cx="210" cy="182" r="7"/>
+    <circle cx="200" cy="182" r="4"/>
+  </g>
+
+  <!-- mini kotak & garnish -->
+  <rect x="272" y="200" width="56" height="48" rx="10" fill="#F6DE9F"/>
+  <rect x="294" y="200" width="12" height="48" fill="#B93A21"/>
+  <path d="M106 240 c-2 -9 7 -16 16 -16 c1 8 -6 15 -16 16 z" fill="#3C8B5D"/>
+</svg>
