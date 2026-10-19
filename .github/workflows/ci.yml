@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    env:
+      # Sesuaikan bila build butuh env lain (mis. DATABASE_URL untuk Prisma).
+      NEXT_PUBLIC_BASE_URL: http://localhost:3000
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck --if-present
+
+      - name: Lint
+        run: npm run lint --if-present
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Dependency audit (high+, allowlist dari SECURITY.md)
+        run: bash scripts/security-audit.sh audit
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: SAST (semgrep)
+        run: |
+          python3 -m venv /tmp/semgrep-venv
+          /tmp/semgrep-venv/bin/pip install --quiet semgrep
+          /tmp/semgrep-venv/bin/semgrep scan --config p/owasp-top-ten --config p/typescript --config p/react --metrics=off --error
